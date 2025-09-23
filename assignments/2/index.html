@@ -3,60 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Justin Santos</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        .profile {
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px gray;
-        }
-
-        .profile p {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .profile img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-        }
-
-        .skills-container {
-            display: flex;
-            justify-content: center;
-        }
-
-        .skills-column {
-            margin: 20px;
-            text-align: left;
-        }
-
-        .projects-section {
-            margin: 20px auto;
-            width: 80%;
-            max-width: 800px;
-            text-align: left;
-        }
-
-        .projects-section h1 {
-            text-align: center;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            margin: 20px;
-        }
-
-        .contact-links a {
-            margin: 0 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -64,9 +11,17 @@
 <div class="profile">
     <img src="images/portrait.jpg" alt="My Photo">
     <h1>Justin Santos</h1>
-    <p> Aloha! My name is Justin. I'm a self-motivated, accomplished Cybersecurity Analyst with 6 years of experience in the United States Navy and Intelligence Community
-        After finishing my military tour, I decided to take what I learned in cyber and expand my horizons by pursuing an undergraduate degree in computer science.
-        My hope is to develop a rich and diverse skill set backed by years of experience that will be invaluable to any company in the tech industry.
+    <p> Aloha! My name is Justin. I'm a self-motivated, accomplished Cybersecurity Analyst with 6 years of experience in
+        the United States Navy and Intelligence Community specializing in network analysis and incident response.
+        After finishing my military tour, I decided to take what I learned in cyber and expand my horizons by pursuing
+        an undergraduate degree in computer science at San Francisco State University.
+        My goal is to develop a rich and diverse skill set backed by years of experience that will be invaluable to any
+        company in the tech industry.
+    </p>
+    <br>
+    <p> When I'm not on the computer, I enjoy playing card games competitively. I'm also a big foodie and love traveling
+        and trying new things.
+        I also love art and do amateur graphic design for local businesses in my free time.
     </p>
 
 </div>
@@ -76,8 +31,7 @@
 <div class="skills-container">
     <div class="skills-column">
         <h2>Programming Languages</h2>
-        <ul>
-            <!-- TODO Insert list items-->
+        <ul class="skills-list">
             <li>Java</li>
             <li>C++</li>
             <li>Python</li>
@@ -87,8 +41,7 @@
     </div>
     <div class="skills-column">
         <h2>Tools & Technologies</h2>
-        <ul>
-            <!-- TODO Insert list items-->
+        <ul class="skills-list">
             <li>Git</li>
             <li>VS Code</li>
             <li>Eclipse</li>
@@ -98,8 +51,7 @@
     </div>
     <div class="skills-column">
         <h2>Cybersecurity Expertise</h2>
-        <ul>
-            <!-- TODO Insert list items-->
+        <ul class="skills-list">
             <li>Wireshark</li>
             <li>Splunk</li>
             <li>Elastic Stack</li>
@@ -112,94 +64,125 @@
 <!-- 3. Projects -->
 <div class="projects-section">
     <h1>Projects</h1>
+
     <div class="project">
         <h2>Task Management App</h2>
-        <a href="https://github.com/jasant753/CSC220/tree/main/TaskManagerApp">
-            https://github.com/jasant753/CSC220/tree/main/TaskManagerApp
-        </a>
-        <p>Developed a Java-based Task Management System incorporating advanced data structures (e.g., graphs, trees, hash maps)
+        <p>
+            Developed a Java-based Task Management System incorporating advanced data structures (e.g., graphs, trees,
+            hash maps)
             to manage complex task operations like prioritization, dependencies, and analytics.
         </p>
+        <a href="https://github.com/jasant753/CSC220/tree/main/TaskManagerApp">Github Link</a>
+        <details>
+            <summary>Show / Hide Features</summary>
 
-        <h3>Features</h3>
-
-        <p><strong>User Management</strong></p>
-        <ul>
-            <li>Register and switch between unique users</li>
-            <li>User tasks stored separately using HashMap and HashSet</li>
-        </ul>
-
-        <p><strong>Task Creation</strong></p>
-        <ul>
-            <li>Each task has a title, category, description, due date, priority</li>
-            <li>Tasks can be marked as recurring</li>
-            <li>Tasks can be dependent on other tasks</li>
-        </ul>
-
-        <p><strong>Data Structure Integrations</strong></p>
-        <ul>
-            <li>DoublyLinkedList: stores tasks for each user</li>
-            <li>SinglyLinkedList: maintains a history log of task operations</li>
-            <li>CircularLinkedList: manages recurring tasks</li>
-            <li>Stack (ActionStack): supports undo/redo of task creation</li>
-            <li>BinarySearchTree: organizes tasks by due date for sorted traversal</li>
-            <li>MinHeap/MaxHeap: retrieves most/least urgent task</li>
-            <li>TaskPriorityQueue: builds a priority queue from tasks in the BST</li>
-            <li>TaskDependencyGraph: models task dependencies using a directed graph with cycle detection</li>
-        </ul>
-
-        <p><strong>Task Dependencies</strong></p>
-        <ul>
-            <li>When adding a task, user can specify if it depends on another task</li>
-            <li>Tasks are added to a directed graph</li>
-            <li>Cycles are detected using DFS and rejected to prevent circular dependencies</li>
-        </ul>
-
-        <p><strong>Reporting and Visualization</strong></p>
-        <ul>
-            <li>Menu option to export:</li>
+            <p><b>User Management</b></p>
             <ul>
-                <li>All user tasks</li>
-                <li>Recurring tasks</li>
-                <li>Task dependencies</li>
-                <li>Priority queue (sorted by urgency)</li>
+                <li>Register and switch between unique users</li>
+                <li>User tasks stored separately using HashMap and HashSet</li>
             </ul>
-            <li>Output is written to a .txt file per user</li>
-        </ul>
+
+            <p><b>Task Creation</b></p>
+            <ul>
+                <li>Each task has a title, category, description, due date, priority</li>
+                <li>Tasks can be marked as recurring</li>
+                <li>Tasks can be dependent on other tasks</li>
+            </ul>
+
+            <p><b>Data Structure Integrations</b></p>
+            <ul>
+                <li>DoublyLinkedList: stores tasks for each user</li>
+                <li>SinglyLinkedList: maintains a history log of task operations</li>
+                <li>CircularLinkedList: manages recurring tasks</li>
+                <li>Stack (ActionStack): supports undo/redo of task creation</li>
+                <li>BinarySearchTree: organizes tasks by due date for sorted traversal</li>
+                <li>MinHeap/MaxHeap: retrieves most/least urgent task</li>
+                <li>TaskPriorityQueue: builds a priority queue from tasks in the BST</li>
+                <li>TaskDependencyGraph: models task dependencies using a directed graph with cycle detection</li>
+            </ul>
+
+            <p><b>Task Dependencies</b></p>
+            <ul>
+                <li>When adding a task, user can specify if it depends on another task</li>
+                <li>Tasks are added to a directed graph</li>
+                <li>Cycles are detected using DFS and rejected to prevent circular dependencies</li>
+            </ul>
+
+            <p><b>Reporting and Visualization</b></p>
+            <ul>
+                <li>Menu option to export:
+                    <ul>
+                        <li>All user tasks</li>
+                        <li>Recurring tasks</li>
+                        <li>Task dependencies</li>
+                        <li>Priority queue (sorted by urgency)</li>
+                    </ul>
+                </li>
+                <li>Output is written to a .txt file per user</li>
+            </ul>
+        </details>
     </div>
 
     <div class="project">
-        <h2>Grand Archive Calculator</h2>
+        <h2>Event Manager</h2>
         <!-- TODO push code to github and update link-->
         <p>
-            Created a simple C++ console-based hypergeometric probability calculator for use in the Grand Archive TCG.
-            Grand Archive features various “spirits” that give you different options of drawing your initial hand.
-            This app helps competitive players calculate the probability that you will open with an important card turn 1.
+            Simple C++ event-ticketing application that implements data structures to allow an event organizer to manage
+            events.
         </p>
 
-        <h3>Features</h3>
+        <details>
+            <summary>Show / Hide Features</summary>
 
-        <p><strong>Interactive Console Prompts</strong></p>
-        <ul>
-            <li>Users can set deck size and select draw mode</li>
-            <li>Guides the user with step-by-step prompts</li>
-        </ul>
+            <p><b>User management</b></p>
+            <ul>
+                <li>Create a profile</li>
+                <li>Guides the user with step-by-step prompts</li>
+                <li>Display user information</li>
+                <li>Create events</li>
+                <li>Display events</li>
+                <li>display their kth event (e.g. their 3rd event)</li>
+                <li>Modify events based on index</li>
+                <li>Sell tickets to an event</li>
+                <li>Delete events</li>
+            </ul>
 
-        <p><strong>Spirit (Draw) Modes</strong></p>
-        <ul>
-            <li><strong>Regular (7 cards):</strong> Standard 7-card hand calculation</li>
-            <li><strong>Serene/Fragmented (6 cards):</strong> Draw 6; option to bottom any number of cards and redraw that many (known as “Glimpse” in-game)</li>
-            <li><strong>Fortuitous (7 cards):</strong> Glimpse 7; if you miss, bottom up to 7 blanks and redraw exactly that many. Optionally “level,” which forces a random discard of 1 card from your final 7</li>
-        </ul>
+            <p><b>Classes and derived classes</b></p>
+            <ul>
+                <li><b>Organizer</b>
+                    <ul>
+                        <li>Username</li>
+                        <li>Email address</li>
+                        <li>Password</li>
+                        <li>Bio</li>
+                        <li>Profile Picture</li>
+                    </ul>
+                </li>
+                <li><b>Events</b>
+                    <ul>
+                        <li><b>Virtual Events</b>
+                            <ul>
+                                <li>Stream link</li>
+                                <li>Audience</li>
+                            </ul>
+                        </li>
+                        <li><b>Venue Events</b>
+                            <ul>
+                                <li>Venue</li>
+                                <li>dateTime</li>
+                                <li>Capacity</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
 
-        <p><strong>First vs. Second Turn Support</strong></p>
-        <ul>
-            <li>Displays probabilities for going first and second</li>
-        </ul>
+        </details>
     </div>
+</div>
 
 <!-- 4. Contact -->
-<h1>Contact</h1>
+<footer><b>Contact</b></footer>
 <div class="contact-links">
     <a href="mailto:jasant753@gmail.com">jasant753@gmail.com</a>
     <a href="https://www.linkedin.com/in/justin-santos-485974216/">LinkedIn</a>

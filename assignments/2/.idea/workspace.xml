@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a4d54af-1813-4c62-bf12-3cf4f2d653ca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+    <list default="true" id="b59f105d-846a-41fd-bab9-2ee7c733bf64" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,46 +15,38 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
-        <option value="tsconfig.json" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
-}</component>
-  <component name="ProjectId" id="32yvw3Hs182YxYHPC7gYAk2tNnI" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="334rO0xqTmrQSS0J2M9KmkPG4wz" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
     "JavaScript Debug.index.html.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/jsant/Documents/CSC317/Assignments/2",
+    "last_opened_file_path": "C:/Users/jsant/Documents/Github/CSC317/assignments/2",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "C:/Users/jsant/AppData/Roaming/JetBrains/WebStorm2025.2/node/versions/22.19.0/node",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\jsant\WebstormProjects\Assignments\2\images" />
-    </key>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -68,13 +56,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4a4d54af-1813-4c62-bf12-3cf4f2d653ca" name="Changes" comment="" />
-      <created>1758405862032</created>
+      <changelist id="b59f105d-846a-41fd-bab9-2ee7c733bf64" name="Changes" comment="" />
+      <created>1758587149721</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1758405862032</updated>
-      <workItem from="1758405863086" duration="9891000" />
-      <workItem from="1758513268849" duration="7451000" />
+      <updated>1758587149721</updated>
+      <workItem from="1758587150981" duration="466000" />
     </task>
     <servers />
   </component>
