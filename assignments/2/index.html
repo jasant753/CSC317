@@ -19,11 +19,10 @@
         company in the tech industry.
     </p>
     <br>
-    <p> When I'm not on the computer, I enjoy playing card games competitively. I'm also a big foodie and love traveling
-        and trying new things.
+    <p> When I'm not at my computer, my favorite hobby is playing card games competitively. I'm a big foodie and love
+        traveling and trying new things.
         I also love art and do amateur graphic design for local businesses in my free time.
     </p>
-
 </div>
 
 <!-- 2. Skills -->
@@ -68,7 +67,8 @@
     <div class="project">
         <h2>Task Management App</h2>
         <p>
-            Developed a Java-based Task Management System incorporating advanced data structures (e.g., graphs, trees,
+            Collaborated on a Java-based Task Management System incorporating advanced data structures (e.g., graphs,
+            trees,
             hash maps)
             to manage complex task operations like prioritization, dependencies, and analytics.
         </p>
@@ -125,69 +125,58 @@
 
     <div class="project">
         <h2>Event Manager</h2>
-        <!-- TODO push code to github and update link-->
         <p>
-            Simple C++ event-ticketing application that implements data structures to allow an event organizer to manage
-            events.
+            Developed a simple C++ event-ticketing application that implements class based data structures to allow an
+            event
+            organizer to manage events sales.
         </p>
 
         <details>
             <summary>Show / Hide Features</summary>
 
-            <p><b>User management</b></p>
+            <p><b>User Profiles</b></p>
             <ul>
-                <li>Create a profile</li>
-                <li>Guides the user with step-by-step prompts</li>
-                <li>Display user information</li>
-                <li>Create events</li>
-                <li>Display events</li>
-                <li>display their kth event (e.g. their 3rd event)</li>
-                <li>Modify events based on index</li>
-                <li>Sell tickets to an event</li>
-                <li>Delete events</li>
+                <li>Create a profile (username, email, password, short bio, profile picture path)</li>
+                <li>Display profile information (password excluded)</li>
+                <li>Modify password</li>
             </ul>
 
-            <p><b>Classes and derived classes</b></p>
+            <p><b>Event Management</b></p>
             <ul>
-                <li><b>Organizer</b>
-                    <ul>
-                        <li>Username</li>
-                        <li>Email address</li>
-                        <li>Password</li>
-                        <li>Bio</li>
-                        <li>Profile Picture</li>
-                    </ul>
-                </li>
-                <li><b>Events</b>
-                    <ul>
-                        <li><b>Virtual Events</b>
-                            <ul>
-                                <li>Stream link</li>
-                                <li>Audience</li>
-                            </ul>
-                        </li>
-                        <li><b>Venue Events</b>
-                            <ul>
-                                <li>Venue</li>
-                                <li>dateTime</li>
-                                <li>Capacity</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+                <li>Create new event</li>
+                <li>Display all events</li>
+                <li>Display the xth event (e.g., 3rd event)</li>
+                <li>Modify an event by index (update name and description)</li>
+                <li>Delete an event</li>
             </ul>
 
+            <p><b>Ticket Sales</b></p>
+            <ul>
+                <li>Sell a ticket to a selected event</li>
+                <li>Virtual events: generate a one-time access code (no capacity change)</li>
+                <li>Venue events: check seat availability; decrement capacity or report sold-out</li>
+            </ul>
+
+            <p><b>Event Types & Fields</b></p>
+            <ul>
+                <li>Common fields: name, description, rating, tickets sold</li>
+                <li>VirtualEvent: streamLink, audience</li>
+                <li>VenueEvent: venue, dateTime, capacity</li>
+            </ul>
         </details>
     </div>
 </div>
 
 <!-- 4. Contact -->
-<footer><b>Contact</b></footer>
-<div class="contact-links">
-    <a href="mailto:jasant753@gmail.com">jasant753@gmail.com</a>
-    <a href="https://www.linkedin.com/in/justin-santos-485974216/">LinkedIn</a>
-    <a href="https://github.com/jasant753">GitHub</a>
-</div>
+<footer>
+    <h2>Contact</h2>
+    <div class="contact-links">
+        <a href="mailto:jasant753@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/justin-santos-485974216/">LinkedIn</a>
+        <a href="https://github.com/jasant753">GitHub</a>
+    </div>
+    <p>&copy; 2025 Justin Santos</p>
+</footer>
 
 </body>
 </html>

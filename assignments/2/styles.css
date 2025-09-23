@@ -92,13 +92,22 @@ body {
     word-break: break-all;
 }
 
+footer {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
 .contact-links {
     display: flex;
     justify-content: center;
-    margin: 20px;
     gap: 30px;
+    margin-bottom: 10px;
 }
 
 .contact-links a {
-    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
 }
