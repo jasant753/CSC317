@@ -1,4 +1,4 @@
-**User:**\ 
+**User:**
 Here is an HTML that is already created. It is a student portfolio webpage. Please create a CSS style file that is clean to look. 
 Color: make sure is readable, not too bright or too dark. Don't use too much different color. All I want is readable and clean
 Body layout: profile picture at the top left, and the name it is at the right of the picture.
@@ -6,8 +6,9 @@ Then, make the intoduction of the person more middle.
 And then, the list of items can be fit into one column(means all 3 using 1 colume of spaces, not seperate them by spaces)
 Lastly, you can add, but not change the orignal html file since there will be other people also doing with it.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-**AI:**\ 
+**AI:** 
 I'll create a clean, readable CSS file that matches your requirements. Here's the styles.css file:
 
 ```css
@@ -238,6 +239,7 @@ code {
     }
 }
 ```
+**Notes:**
 This CSS provides:
 
 Clean, readable colors: Uses a neutral color palette with dark gray text on light backgrounds
@@ -261,11 +263,15 @@ The design is professional, clean, and focuses on readability without being too 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-USER: can you please change the introduction that align? like not fully center that all the words are not looking well
+**USER:**
+can you please change the introduction that align? like not fully center that all the words are not looking well
 
-AI: Certainly! I'll modify the CSS to make the introduction text left-aligned instead of fully centered, which will improve readability while keeping it centered in the layout. Here's the updated styles.css:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-css
+**AI:**
+Certainly! I'll modify the CSS to make the introduction text left-aligned instead of fully centered, which will improve readability while keeping it centered in the layout. Here's the updated styles.css:
+
+```css
 /* Reset and base styles */
 * {
     margin: 0;
@@ -488,6 +494,9 @@ code {
         padding: 0 15px;
     }
 }
+```
+
+**Note:**
 The key changes I made to the biography section:
 
 Changed text-align: center to text-align: left - This makes the text left-aligned which is much more readable for longer paragraphs
@@ -508,7 +517,8 @@ The text will now have a clean, professional appearance that's easy to read whil
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-USER: for the list of items is there a way that i can change it look like this format?
+**USER:** 
+for the list of items is there a way that i can change it look like this format?
 
 Language 
 ... | ... | ...
@@ -516,11 +526,14 @@ Language
 Tools
 ... | ... | ...
 
-AI: Looking at your HTML structure, the skills section currently has three groups stacked vertically. To change it to a horizontal table-like format, we would need to modify the HTML structure significantly, which you mentioned you don't want to do since others are working with the same file.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**AI:**
+Looking at your HTML structure, the skills section currently has three groups stacked vertically. To change it to a horizontal table-like format, we would need to modify the HTML structure significantly, which you mentioned you don't want to do since others are working with the same file.
 
 However, I can create a CSS layout that makes the skills section look more like a table while keeping your existing HTML intact. Here's an updated CSS approach:
 
-css
+```css
 /* Reset and base styles */
 * {
     margin: 0;
@@ -775,6 +788,9 @@ code {
         text-align: center;
     }
 }
+```
+
+**Note:**
 This approach creates a table-like appearance by:
 
 Removing gaps between skill groups - Uses borders to separate them instead of spacing
@@ -795,11 +811,15 @@ This maintains your single-column requirement while giving it a more structured,
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-USER: for the link refer to contact, which is the footer i think, the gray color with colon :, which is too gray with white background to unable to see it, and the link is blue, which looks weird that the link is stick to the right
+**USER:**
+for the link refer to contact, which is the footer i think, the gray color with colon :, which is too gray with white background to unable to see it, and the link is blue, which looks weird that the link is stick to the right
 
-AI: You're absolutely right! The contact links in the footer have poor contrast and awkward spacing. Let me fix that:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-css
+**AI:**
+You're absolutely right! The contact links in the footer have poor contrast and awkward spacing. Let me fix that:
+
+```css
 /* Reset and base styles */
 * {
     margin: 0;
@@ -1097,6 +1117,9 @@ code {
         text-align: center;
     }
 }
+```
+
+**Note:**
 The key changes I made to the footer contact section:
 
 Better contrast: Changed the contact labels to a lighter gray (#bdc3c7) that stands out against the dark footer background
