@@ -1,20 +1,16 @@
-User: Here is an HTML that is already created. It is a student portfolio webpage. Please create a CSS style file that is clean to look. 
-
+**User:**\ 
+Here is an HTML that is already created. It is a student portfolio webpage. Please create a CSS style file that is clean to look. 
 Color: make sure is readable, not too bright or too dark. Don't use too much different color. All I want is readable and clean
-
 Body layout: profile picture at the top left, and the name it is at the right of the picture.
-
 Then, make the intoduction of the person more middle. 
-
 And then, the list of items can be fit into one column(means all 3 using 1 colume of spaces, not seperate them by spaces)
-
 Lastly, you can add, but not change the orignal html file since there will be other people also doing with it.
 
 
-AI: 
+**AI:**\ 
 I'll create a clean, readable CSS file that matches your requirements. Here's the styles.css file:
 
-css
+```css
 /* Reset and base styles */
 * {
     margin: 0;
@@ -241,6 +237,7 @@ code {
         text-align: left;
     }
 }
+```
 This CSS provides:
 
 Clean, readable colors: Uses a neutral color palette with dark gray text on light backgrounds
