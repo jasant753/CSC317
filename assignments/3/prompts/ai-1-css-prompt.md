@@ -17,7 +17,7 @@ Keeps the Profile area on a white card (with your avatar subtly animated so it s
 
 
 
-
+``` css
 /* ===============================
    Hand-written Dark Theme (Grid)
    Layout: Top row = Profile (L) + Skills (R)
