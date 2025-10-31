@@ -12,7 +12,7 @@
 # Portfolio Styling Assignment Analysis
 
 ## Group Analysis (250-500 words)
-Overall as a group, we did what we were all individually asked to do and collectively. Each teammate created their own version of the AI-generated CSS and prompt. We noticed that more often than not, AI could quickly produce a design based on our prompts but they were never perfect and have some mistakes when compared to our vision of what we wanted. When building the Hybrid CSS together, we combined the style.css file and AI-1.css theme.
+Overall as a group, we did what we were all individually asked to do and collectively. Each teammate created their own version of the AI-generated CSS and prompt. We noticed that more often than not, AI could quickly produce a design based on our prompts but they were never perfect and have some mistakes when compared to our vision of what we wanted. When building the Hybrid CSS together, we combined the style.css file with some sections from each of the other Ai files.
 
 [Write a collaborative analysis comparing the different approaches. Each member should contribute to this section.]
 
