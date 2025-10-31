@@ -8,7 +8,7 @@ Layout: I want the webpage to be separated into 3 sections, 2 boxes split down t
 Do not make any changes to the HTML file at all.
 
 
-**AI**
+**AI:**
 I made you a drop-in replacement CSS (dark palette, high contrast, clean typography, responsive grid) that:
 
 Lays the page out as two top boxes (Profile left, Skills/Experience right) and a bottom half for three evenly spaced project cards.

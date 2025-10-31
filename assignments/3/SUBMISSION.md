@@ -12,12 +12,15 @@
 # Portfolio Styling Assignment Analysis
 
 ## Group Analysis (250-500 words)
+Overall as a group, we did what we were all individually asked to do and collectively. Each teammate created their own version of the AI-generated CSS and prompt. We noticed that more often than not, AI could quickly produce a design based on our prompts but they were never perfect and have some mistakes when compared to our vision of what we wanted. When building the Hybrid CSS together, we combined the style.css file and AI-1.css theme.
+
 [Write a collaborative analysis comparing the different approaches. Each member should contribute to this section.]
 
 ## Individual Reflections
 
-### [Member 1 Name] - Hand-written CSS (Part 1)
-[Individual reflection on lessons learned and contribution to hand-written CSS]
+### [Abraham Kao] - Hand-written CSS (Part 1)
+The hand written CSS helped me better understand how to organize a webpage using flexbox and other layout techniques. Using spacing and shadows helped make the sections look more clean and readable.
+I struggled a bit when it came to balancing out colors and spacing, making sure the design wasn't super crowded.
 
 ### [Member 2 Name] - AI Text Prompt CSS
 [I used ChatGPT to generate this Matrix-like style. It's not a style I would personally use, but I wanted to push the ai
@@ -36,4 +39,6 @@ about how far we can push css, as I wasn't expecting this level of detail.]
 [Explain which version the group prefers and why - this should be a consensus decision]
 
 ## Collaboration Experience
+We focused a lot on communication and helping each other out whenever we faced a problem. What we all found challenging was getting used to github and using the terminal as we faced quite a lot of problems setting it up. 
+
 [Describe how the group worked together, challenges faced, and lessons learned about teamwork]
