@@ -19,4 +19,4 @@
 - AI Text Prompt CSS: [Student Name 4]
 - Hybrid Solution: [All Members - collaborative effort]
 - Switcher Implementation: [All Members - collaborative effort]
-- Documentation & Analysis: [Lead member name(s)]
+- Documentation & Analysis: [All Members - collaborative effort]
