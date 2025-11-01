@@ -4,7 +4,7 @@
 - [Abraham Kao] - [923162380] - [AbrahamKao] - **Hand-written CSS (Part 1)**
 - [Justin Santos] - [923247829] - [jasant753] - **Hand-written CSS (Part 2)**
 - [Jiaming Yu] - [923430323] - [JiamingYu001] - **AI Text Prompt CSS**
-- [Student Name 4] - [Student ID] - [GitHub Username] - **AI Image+Text Prompt CSS** (if applicable)
+- [Joaquin Molina] - [924524273] - [joaquinmolinamoyano] - **AI Image+Text Prompt CSS** (if applicable)
 
 **Elected Submitter:** [Name and GitHub username of person submitting]
 **Repository Link:** https://github.com/[submitter-username]/CSC317/tree/main/assignments/3
@@ -16,7 +16,7 @@
 - AI Text Prompt CSS: [Abraham Kao]
 - AI Text Prompt CSS: [Justin Santos]
 - AI Text Prompt CSS: [Jiaming Yu]
-- AI Text Prompt CSS: [Student Name 4]
+- AI Text Prompt CSS: [Joaquin Molina]
 - Hybrid Solution: [All Members - collaborative effort]
 - Switcher Implementation: [All Members - collaborative effort]
 - Documentation & Analysis: [All Members - collaborative effort]
