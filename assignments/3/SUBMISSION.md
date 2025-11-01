@@ -4,7 +4,7 @@
 - [Abraham Kao] - [923162380] - [AbrahamKao]
 - [Justin Santos] - [923247829] - [jasant753]
 - [Jiaming Yu] - [923430323] - [JiamingYu001]
-- [Student Name 4] - [Student ID] - [GitHub Username] (if applicable)
+- [Joaquin Molina] - [924524273] - [JoaquinMolinaMoyano] 
 
 **Elected Submitter:** [Justin Santos] - [jasant753]
 **Repository Link:** https://github.com/jasant753/CSC317/tree/main/assignments/3
@@ -20,7 +20,7 @@ vertically, making it easier to see everything without scrolling and added a sub
 Justin went for a more complex layout, evoking the aesthetics of the movie, The Matrix.While the final result was quite 
 impressive and we learned a lot of what is possible with css styling, we all felt the theme was too distracting to base 
 our hybrid css on. Similar to Abraham, Jiaming went for an aesthetic layout that was clean, but opted for a lighter 
-color scheme similar to the handwritten one. When building the Hybrid CSS together, we combined the style.css file with 
+color scheme similar to the handwritten one. Joaquin went a style inspired by windows xp, it gave an interesting result but was overall a bit basic. When building the Hybrid CSS together, we combined the style.css file with 
 some sections from each of the other Ai files.Our layouts looked pretty similar outside of aesthetic choices, so we 
 ended up choosing a feature we really liked from each of our ai styles and incorporating it into the handwritten css.]
 
@@ -31,7 +31,7 @@ ended up choosing a feature we really liked from each of our ai styles and incor
 Using spacing and shadows helped make the sections look more clean and readable. I struggled a bit when it came to 
 balancing out colors and spacing, making sure the design wasn't super crowded.]
 
-### [Member 2 Name] - AI Text Prompt CSS
+### [Justin Santos] - AI Text Prompt CSS
 [I used ChatGPT to generate this Matrix-like style. It's not a style I would personally use, but I wanted to push the ai
 to see what kind of effects would be possible with just CSS. I was really impressed by the result, especially the
 animated background the ai was able to create without any additional tech. It also only took one input to get the result
