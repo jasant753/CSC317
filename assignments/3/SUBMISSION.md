@@ -46,8 +46,8 @@ non-details prompt that I give to AI. But I can keep chatting 2, or more promtps
 with. What I learn from the AI is acutally a good tools to help to design an interface to make it looks better, but not 
 enough because it seems still rough as the ideas might not really match what the user might wanted.]
 
-### [Member 4 Name] - AI Image+Text Prompt CSS (if applicable)
-[Individual reflection on AI prompting with images and lessons learned]
+### [Joaquin Molina] - AI Image+Text Prompt CSS (if applicable)
+[I used ChatGPT for the style. It was created with the idea to imitaite windows xp. The resulting page was effective and functional so I was happy with the result. I think it did only an ok job of immitating windows xp, however this could likely be improved with further prompting. What I learned is that the AI is very good at giving you a rough functional idea of what you want, but if you desire your specific vision you will either have to prompt further or modify the results.]
 
 ## Group Preferred Version
 [We preferred Jiaming's layout as it was aesthetically pleasing and easy to read, but we liked the colorscheme of
