@@ -1,14 +1,27 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --card-bg: #ffffff;
+    --border-color: #dddddd;
+    --accent-color: #007bff;
+    --accent-hover: #0069d9;
+    --button-bg: #f0f0f0;
+    --button-hover: #e0e0e0;
+}
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 
-.site-header{
+.site-header {
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--card-bg);
     box-shadow: 0 2px 5px gray;
 }
 
@@ -42,11 +55,10 @@ body {
 }
 
 .skill-group {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 15px 20px;
-    flex: fit-content;
     min-width: 250px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -56,13 +68,7 @@ body {
 .skills-list {
     text-align: center;
     font-size: 1.2em;
-    color: #333;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.skills .list {
+    color: var(--text-color);
     list-style: none;
     padding: 0;
     margin: 0;
@@ -76,14 +82,15 @@ body {
 .projects {
     text-align: left;
 }
+
 .projects .section-title {
     text-align: center;
     margin-bottom: 20px;
 }
 
 .project {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -91,19 +98,16 @@ body {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.project-list {
-    text-align: left;
-}
-
 .project:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
 .site-footer {
     background-color: #f7f7f7;
     padding: 20px;
     margin-top: 40px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--border-color);
     text-align: center;
 }
 
@@ -121,7 +125,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #fff;
+    background-color: var(--card-bg);
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     padding: 12px;
@@ -144,8 +148,8 @@ body {
 
 .theme-button {
     padding: 8px 12px;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
+    background-color: var(--button-bg);
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
@@ -153,11 +157,11 @@ body {
 }
 
 .theme-button:hover {
-    background-color: #e0e0e0;
+    background-color: var(--button-hover);
 }
 
 .theme-button.active {
-    background-color: #007bff;
+    background-color: var(--accent-color);
     color: white;
-    border-color: #0069d9;
+    border-color: var(--accent-hover);
 }

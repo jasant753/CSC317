@@ -18,11 +18,12 @@ on our prompts, but they were never perfect and have some mistakes when compared
 Abraham went for a darker theme, focusing on a webpage that was aesthetically pleasing. His layout was more condensed 
 vertically, making it easier to see everything without scrolling and added a subtler animation than our handwritten css.
 Justin went for a more complex layout, evoking the aesthetics of the movie, The Matrix.While the final result was quite 
-impressive and we learned a lot of what is possible with css styling, we all felt the theme was too distracting to base 
+impressive, and we learned a lot of what is possible with css styling, we all felt the theme was too distracting to base 
 our hybrid css on. Similar to Abraham, Jiaming went for an aesthetic layout that was clean, but opted for a lighter 
-color scheme similar to the handwritten one. Joaquin went a style inspired by windows xp, it gave an interesting result but was overall a bit basic. When building the Hybrid CSS together, we combined the style.css file with 
-some sections from each of the other Ai files.Our layouts looked pretty similar outside of aesthetic choices, so we 
-ended up choosing a feature we really liked from each of our ai styles and incorporating it into the handwritten css.]
+color scheme similar to the handwritten one. Joaquin went a style inspired by Windows xp, it gave an interesting result
+but was overall a bit basic. When building the Hybrid CSS together, we combined the style.css file with some sections 
+from each of the other Ai files.Our layouts looked pretty similar outside of aesthetic choices, so we ended up choosing
+a feature we really liked from each of our ai styles and incorporating it into the handwritten css.]
 
 ## Individual Reflections
 
@@ -39,15 +40,19 @@ I wanted, but It may be due to how descriptive I was in the original prompt. I t
 about how far we can push css, as I wasn't expecting this level of detail.]
 
 ### [Jiaming Yu] - AI Text Prompt CSS
-[The AI tools I am using to genenrating the CSS is DeepSeek. The first prompt I am giving out to DeepSeek is not much 
+[The AI tools I am using to generating the CSS is DeepSeek. The first prompt I am giving out to DeepSeek is not much 
 details, but it is working with the ways I want. Personally I don't really have art talents. This means that my CSS 
 style or AI-CSS style will look not really fantastic, but ok to read. As there might be some unsatisify due to my 
-non-details prompt that I give to AI. But I can keep chatting 2, or more promtps to make a version that I am satisify 
-with. What I learn from the AI is acutally a good tools to help to design an interface to make it looks better, but not 
-enough because it seems still rough as the ideas might not really match what the user might wanted.]
+non-details prompt that I give to AI. But I can keep chatting 2, or more prompts to make a version that I am satisfy 
+with. What I learn from the AI is actually a good tools to help to design an interface to make it looks better, but not 
+enough because it seems still rough as the ideas might not really match what the user might want.]
 
 ### [Joaquin Molina] - AI Image+Text Prompt CSS (if applicable)
-[I used ChatGPT for the style. It was created with the idea to imitaite windows xp. The resulting page was effective and functional so I was happy with the result. I think it did only an ok job of immitating windows xp, however this could likely be improved with further prompting. What I learned is that the AI is very good at giving you a rough functional idea of what you want, but if you desire your specific vision you will either have to prompt further or modify the results.]
+[I used ChatGPT for the style. It was created with the idea to imitate Windows xp. The resulting page was effective and
+functional, so I was happy with the result. I think it did only an ok job of imitating Windows xp, however this could 
+likely be improved with further prompting. What I learned is that the AI is very good at giving you a rough functional 
+idea of what you want, but if you desire your specific vision you will either have to prompt further or modify the 
+results.]
 
 ## Group Preferred Version
 [We preferred Jiaming's layout as it was aesthetically pleasing and easy to read, but we liked the colorscheme of
