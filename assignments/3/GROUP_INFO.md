@@ -11,9 +11,9 @@
 
 ## Work Distribution
 - Hand-written CSS (Collaborative): [Jiaming], [Abraham] and [Justin]
-  - [Justin]: [index.html]
-  - [Jiaming]: [styles.css]
-  - [Abraham]: [styles.css]
+  - [Justin]\: [index.html]
+  - [Jiaming]\: [styles.css]
+  - [Abraham]\: [styles.css]
 - AI Text Prompt CSS: [Abraham Kao]
 - AI Text Prompt CSS: [Justin Santos]
 - AI Text Prompt CSS: [Jiaming Yu]
