@@ -1,7 +1,9 @@
-let username = "JavaScript";
+let name = "JavaScript";
 
 const createMessage = name => {
-    console.log("createMessage called");
+    if (typeof document !== "undefined") {
+        console.log("createMessage called");
+    }
     return `Hello, ${name}!`;
 };
 
@@ -10,3 +12,5 @@ function getName() {
     name = textInput.value.trim();
     console.log("Name set to:", name);
 }
+
+console.log(createMessage(name));
