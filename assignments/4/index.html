@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 4</title>
+</head>
+<body>
+<h1>Part 0 - Environment Setup</h1>
+
+<label for="nameInput">Name:</label>
+<input type="text" id="nameInput" placeholder="Enter your name">
+<button id="nameButton">Enter</button>
+<button id="greetButton">Say Hello</button>
+
+<div id="output"></div>
+
+<script src="scripts/hello.js"></script>
+<script>
+    document.getElementById("nameButton").addEventListener("click", getName);
+    document.getElementById("greetButton").addEventListener("click", function () {
+        document.getElementById("output").textContent = createMessage(name);
+    });
+</script>
+</body>
+</html>
