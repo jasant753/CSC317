@@ -2,6 +2,8 @@ const display = document.getElementById('display');
 
 let expression = "";
 
+const operators = new Set(["+", "-", "*", "/"]);
+
 // Utility Button Functions
 
 function updateDisplay(num) {
@@ -16,59 +18,160 @@ function clearDisplay() {
     display.value = "";
 }
 
+// Toggles the negative symbol of current operand
 function plusMinus() {
-    // TODO
-    console.log("plusMinus called");
+    if (expression === "") {
+        expression = "-";
+        display.value = expression;
+        console.log("plusMinus:", expression);
+        return;
+    }
+
+    // Locate start of operands
+    let i = expression.length - 1;
+    while (i >= 0 && !operators.has(expression[i])) i--;
+    const start = i + 1;          // Beginning of last number
+    const operand = expression.slice(start);
+
+    // Adds or removes negative from operand
+    if (operand.startsWith("-")) {
+        expression = expression.slice(0, start) + operand.slice(1);
+    } else {
+        expression = expression.slice(0, start) + "-" + operand;
+    }
+
+    display.value = expression;
+    console.log("plusMinus:", expression);
 }
 
+// Takes the current expression and displays that value as a percent value
 function percent() {
-    // TODO
-    console.log("percent called");
+    if (expression !== "") {
+        try {
+            const result = eval(expression);
+            const percentValue = result / 100;
+
+            expression = percentValue.toString();
+            display.value = expression;
+        } catch (e) {
+            console.error("Error in percent():", e);
+            display.value = "Error";
+        }
+    }
+    console.log("percent called:", expression);
 }
 
 function calculate() {
     console.log("calculate called:", expression);
 
-    let result = eval(expression);
-    console.log("calculate called result:", result);
-    display.value = result;
-    expression = result.toString();
+    try {
+        const result = eval(expression);
+        console.log("calculate() result:", result);
+        display.value = result;
+        expression = result.toString();
+    } catch (e) {
+        console.error("calculate() error:", e);
+        display.value = "Error";
+    }
 }
 
 function backspace() {
-    // TODO
-    console.log("backspace called");
+    if (!expression) {
+        display.value = "";
+        return;
+    }
+    expression = expression.slice(0, -1);
+    if (expression.length === 1 && operators.has(expression[0])) {
+        expression = "";
+    }
+    display.value = expression;
+    console.log("backspace called:", expression);
 }
 
 function decimalPoint() {
-    // TODO
-    console.log("decimalPoint called");
+    if (expression === "") {
+        expression = "0."; // Adds 0 if placing decimal before operand
+        display.value = expression;
+        console.log("decimalPoint called:", expression);
+        return;
+    }
+
+    const last = expression.slice(-1);
+    let i = expression.length - 1;
+    while (i >= 0 && !operators.has(expression[i])) i--;
+    const start = i + 1;
+    const segment = expression.slice(start);
+
+    if (segment.includes(".")) {
+        display.value = expression;
+        return;
+    }
+    // Places 0 if following operator (Before operand)
+    if (operators.has(last)) {
+        expression += "0.";
+    } else {
+        expression += ".";
+    }
+    display.value = expression;
+    console.log("decimalPoint called:", expression);
 }
+
 
 // Operation button Functions
 
 function addOperator() {
-    console.log("addOperator called:", expression);
-    if (expression !== "" && !expression.endsWith("+")) {
+    if (expression !== "") {
+        const last = expression.slice(-1);
+
+        // Replace previous operator if any
+        if (operators.has(last)) {
+            expression = expression.slice(0, -1);
+        }
         expression += "+";
         display.value = expression;
-        console.log("[addOperator after:", expression);
+    }
+    console.log("addOperator called:", expression);
+}
+
+
+function subtractOperator() {
+    if (expression !== "") {
+        const last = expression.slice(-1);
+
+        if (operators.has(last)) {
+            expression = expression.slice(0, -1);
+        }
+        expression += "-";
+        display.value = expression;
+
+        console.log("subtractOperator called:", expression);
     }
 }
 
-function subtractOperator() {
-    // TODO
-    console.log("subtractOperator called");
-}
-
 function multiplyOperator() {
-    // TODO
-    console.log("multiplyOperator called");
+    if (expression !== "") {
+        const last = expression.slice(-1);
+
+        if (operators.has(last)) {
+            expression = expression.slice(0, -1);
+        }
+        expression += "*";
+        display.value = expression;
+    }
+    console.log("multiplyOperator called:", expression);
 }
 
 function divideOperator() {
-    // TODO
-    console.log("divideOperator called");
+    if (expression !== "") {
+        const last = expression.slice(-1);
+
+        if (operators.has(last)) {
+            expression = expression.slice(0, -1);
+        }
+        expression += "/";
+        display.value = expression;
+    }
+    console.log("divideOperator called:", expression);
 }
 
 // Event Listeners
