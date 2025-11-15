@@ -160,7 +160,6 @@ function divideOperator() {
     console.log("divideOperator called:", expression);
 }
 
-
 // Listeners
 
 for (let n = 0; n <= 9; n++) {
@@ -180,7 +179,6 @@ document.getElementById("percent").addEventListener("click", percent);
 document.getElementById("plusMinus").addEventListener("click", plusMinus);
 document.getElementById("decimal").addEventListener("click", decimalPoint);
 document.getElementById("equals").addEventListener("click", calculate);
-
 
 // Keyboard Support
 
@@ -236,10 +234,9 @@ buttons.forEach(btn => {
     });
 });
 
-
 // Menu
 
-// Profile button
+// Profile buttons
 const profileBtn = document.getElementById("profileBtn");
 profileBtn.addEventListener("click", () => {
     // go back to index.html in same folder
@@ -272,7 +269,7 @@ function updateThemeIcon(mode) {
     }
 }
 
-// initial theme (dark)
+// Initial theme (dark)
 applyTheme("dark");
 updateThemeIcon("dark");
 

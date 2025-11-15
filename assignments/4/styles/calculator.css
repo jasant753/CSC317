@@ -1,3 +1,4 @@
+/* Default dark theme */
 :root {
     --bgpage: #0d0f12;
     --text-main: #e8eaf0;
@@ -186,13 +187,11 @@ button:active {
     font-size: 14px;
 }
 
-
 /* Underglow effect */
 
 button.glow-pulse {
     animation: glowFade 1.1s ease-out;
 }
-
 
 @keyframes glowFade {
     0% {

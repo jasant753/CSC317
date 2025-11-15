@@ -149,7 +149,7 @@ body.site {
     max-width: 55ch;
 }
 
-/* ===== Avatar ===== */
+/* removed animation from assignment 3 */
 .avatar {
     width: clamp(96px, 10vw + 60px, 140px);
     height: clamp(96px, 10vw + 60px, 140px);
@@ -157,17 +157,8 @@ body.site {
     display: block;
     border: 3px solid #e6e9f2;
     box-shadow: 0 4px 16px rgba(0, 0, 0, .12);
-    transform: translateZ(0);
-    animation: float 4s ease-in-out infinite;
-    transition: filter .3s ease, transform .25s ease;
     background: #fff;
     object-fit: cover;
-}
-
-/* Avatar animations from ai-1*/
-.avatar:hover {
-    filter: saturate(1.08) drop-shadow(0 10px 20px rgba(0, 0, 0, .18));
-    transform: translateY(-2px);
 }
 
 @keyframes float {
@@ -257,7 +248,6 @@ body.site {
     color: var(--text);
 }
 
-/* ===== Projects Section ===== */
 .projects {
     text-align: left;
 }
@@ -310,7 +300,6 @@ body.site {
     list-style: none;
 }
 
-/* Link and button colors updated to match ai-1 colorscheme */
 a,
 a.link {
     color: var(--accent);
