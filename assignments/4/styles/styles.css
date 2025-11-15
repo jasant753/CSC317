@@ -258,6 +258,9 @@ body.site {
 .project-list {
     text-align: left;
 }
+.project .list li {
+    margin-bottom: 10px;
+}
 
 .site-footer {
     background-color: var(--footer-bg);
