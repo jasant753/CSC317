@@ -1,44 +1,159 @@
+:root {
+    --bgpage: #0d0f12;
+    --text-main: #e8eaf0;
+    --text-muted: #a3a9b6;
+    --button-bg: #161a20;
+    --button-hover: #1d222a;
+    --border-thin: #1e222a;
+    --accent: #8ab4ff;
+    --accent-hover: #a5c6ff;
+    --accent-equals: #0b4baa;
+    --special-bg: #1f252d;
+    --special-hover: #262d36;
+    --accent-rgb: 138, 180, 255;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: Montserrat, sans-serif;
+    background-color: var(--bgpage);
+    margin: 0;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
 }
 
 .calculator {
-    display: grid;
-    grid-template-columns: repeat(4, 70px);
-    gap: 10px;
-    background-color: #d3d3d3;
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #000000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: min(420px, 100vw); /* Set max width, shrink on small screens */
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: none;
+    border: none;
+    box-shadow: none;
 }
 
 #display {
-    grid-column: span 4;
-    height: 60px;
-    font-size: 20px;
+    width: 100%;
+    height: 110px;
+    font-size: clamp(28px, 4vw, 40px); /* Responsive text size */
     text-align: right;
-    border: 1px solid #999;
-    border-radius: 5px;
-    padding-right: 8px;
+    padding: 12px;
     box-sizing: border-box;
-    margin-bottom: 15px;
+    background: #0b0d10;
+    border: 1px solid var(--border-thin);
+    color: var(--text-main);
 }
+
+.keypad {
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns of buttons */
+    gap: 8px;
+}
+
+/* Button Styling */
 
 button {
-    height: 60px;
-    font-size: 20px;
-    border-radius: 8px;
-    border: 1px solid #999;
-    background-color: #e6e6e6;
+    aspect-ratio: 1 / 1; /* Keeps buttons square ratio */
+    width: 100%;
+    height: auto;
+    position: relative;
+    font-size: 30px;
     cursor: pointer;
+    border: 1px solid var(--border-thin);
+    background: var(--button-bg);
+    color: var(--text-main);
+    outline: none;
+    box-shadow: none;
+
+    /* Animation speeds */
+    transition:
+            background 0.15s ease,
+            border-color 0.15s ease,
+            transform 0.08s ease,
+            box-shadow 0.15s ease;
 }
 
+/* Lighten buttons on hover */
+button:hover {
+    background: var(--button-hover);
+    border-color: var(--border-thin);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Button color grouping */
+#backspace,
+#clear,
+#percent {
+    background: var(--special-bg);
+    border-color: #2d333d;
+    color: var(--text-muted);
+}
+
+#backspace:hover,
+#clear:hover,
+#percent:hover {
+    background: var(--special-hover);
+}
+
+#add,
+#subtract,
+#multiply,
+#divide {
+    background: var(--accent);
+    border-color: var(--accent-hover);
+    color: #111;
+}
+
+#add:hover,
+#subtract:hover,
+#multiply:hover,
+#divide:hover {
+    background: var(--accent-hover);
+}
+
+#equals {
+    background: #0b4baa;
+    color: var(--text-main);
+    border-color: #0b4baa;
+    font-weight: bold;
+}
+
+#equals:hover {
+    background: #145fd8;
+    border-color: #145fd8;
+}
+
+/* Underglow effect */
+button.glow-pulse {
+    animation: glowFade 1.1s ease-out;
+}
+
+@keyframes glowFade {
+    0% {
+        box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.95);
+        transform: scale(1.04);
+    }
+    40% {
+        box-shadow: 0 0 16px rgba(var(--accent-rgb), 0.75);
+        transform: scale(1.02);
+    }
+    80% {
+        box-shadow: 0 0 8px rgba(var(--accent-rgb), 0.35);
+    }
+    100% {
+        box-shadow: 0 0 0 rgba(var(--accent-rgb), 0);
+        transform: scale(1.0);
+    }
+}
+
+/* Hide content for aesthetics */
 .hidden {
     position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
     overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;

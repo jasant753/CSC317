@@ -1,10 +1,9 @@
 const display = document.getElementById('display');
-
 let expression = "";
 
 const operators = new Set(["+", "-", "*", "/"]);
 
-// Utility Button Functions
+// Utility buttons
 
 function updateDisplay(num) {
     expression += num;
@@ -18,7 +17,7 @@ function clearDisplay() {
     display.value = "";
 }
 
-// Toggles the negative symbol of current operand
+// Adds negative to the start of current operand
 function plusMinus() {
     if (expression === "") {
         expression = "-";
@@ -27,13 +26,11 @@ function plusMinus() {
         return;
     }
 
-    // Locate start of operands
     let i = expression.length - 1;
     while (i >= 0 && !operators.has(expression[i])) i--;
-    const start = i + 1;          // Beginning of last number
+    const start = i + 1;
     const operand = expression.slice(start);
 
-    // Adds or removes negative from operand
     if (operand.startsWith("-")) {
         expression = expression.slice(0, start) + operand.slice(1);
     } else {
@@ -44,13 +41,12 @@ function plusMinus() {
     console.log("plusMinus:", expression);
 }
 
-// Takes the current expression and displays that value as a percent value
+// Evaluates current expression then finds percent value
 function percent() {
     if (expression !== "") {
         try {
             const result = eval(expression);
             const percentValue = result / 100;
-
             expression = percentValue.toString();
             display.value = expression;
         } catch (e) {
@@ -58,21 +54,27 @@ function percent() {
             display.value = "Error";
         }
     }
-    console.log("percent called:", expression);
+    console.log("percent() called:", expression);
 }
 
 function calculate() {
-    console.log("calculate called:", expression);
-
     try {
         const result = eval(expression);
-        console.log("calculate() result:", result);
+
+        if (result === Infinity || result === -Infinity || Number.isNaN(result)) {
+            display.value = "Error";
+            expression = "";
+            return;
+        }
+
         display.value = result;
         expression = result.toString();
     } catch (e) {
         console.error("calculate() error:", e);
         display.value = "Error";
+        expression = "";
     }
+    console.log("calculate() called:", expression);
 }
 
 function backspace() {
@@ -90,71 +92,58 @@ function backspace() {
 
 function decimalPoint() {
     if (expression === "") {
-        expression = "0."; // Adds 0 if placing decimal before operand
+        expression = "0."; // Add 0 if operand is empty
         display.value = expression;
         console.log("decimalPoint called:", expression);
         return;
     }
 
+    // Find start of operand
     const last = expression.slice(-1);
     let i = expression.length - 1;
     while (i >= 0 && !operators.has(expression[i])) i--;
     const start = i + 1;
     const segment = expression.slice(start);
 
-    if (segment.includes(".")) {
-        display.value = expression;
-        return;
-    }
-    // Places 0 if following operator (Before operand)
+    if (segment.includes(".")) return;
+
+    // Add 0 after operand
     if (operators.has(last)) {
         expression += "0.";
     } else {
         expression += ".";
     }
+
     display.value = expression;
     console.log("decimalPoint called:", expression);
 }
 
-
-// Operation button Functions
+// Operator Functions
 
 function addOperator() {
     if (expression !== "") {
         const last = expression.slice(-1);
-
-        // Replace previous operator if any
-        if (operators.has(last)) {
-            expression = expression.slice(0, -1);
-        }
+        if (operators.has(last)) expression = expression.slice(0, -1); // Replaces previous operator
         expression += "+";
         display.value = expression;
     }
     console.log("addOperator called:", expression);
 }
 
-
 function subtractOperator() {
     if (expression !== "") {
         const last = expression.slice(-1);
-
-        if (operators.has(last)) {
-            expression = expression.slice(0, -1);
-        }
+        if (operators.has(last)) expression = expression.slice(0, -1);
         expression += "-";
         display.value = expression;
-
-        console.log("subtractOperator called:", expression);
     }
+    console.log("subtractOperator called:", expression);
 }
 
 function multiplyOperator() {
     if (expression !== "") {
         const last = expression.slice(-1);
-
-        if (operators.has(last)) {
-            expression = expression.slice(0, -1);
-        }
+        if (operators.has(last)) expression = expression.slice(0, -1);
         expression += "*";
         display.value = expression;
     }
@@ -164,34 +153,27 @@ function multiplyOperator() {
 function divideOperator() {
     if (expression !== "") {
         const last = expression.slice(-1);
-
-        if (operators.has(last)) {
-            expression = expression.slice(0, -1);
-        }
+        if (operators.has(last)) expression = expression.slice(0, -1);
         expression += "/";
         display.value = expression;
     }
     console.log("divideOperator called:", expression);
 }
 
-// Event Listeners
 
-document.getElementById("btn0").addEventListener("click", () => updateDisplay(0));
-document.getElementById("btn1").addEventListener("click", () => updateDisplay(1));
-document.getElementById("btn2").addEventListener("click", () => updateDisplay(2));
-document.getElementById("btn3").addEventListener("click", () => updateDisplay(3));
-document.getElementById("btn4").addEventListener("click", () => updateDisplay(4));
-document.getElementById("btn5").addEventListener("click", () => updateDisplay(5));
-document.getElementById("btn6").addEventListener("click", () => updateDisplay(6));
-document.getElementById("btn7").addEventListener("click", () => updateDisplay(7));
-document.getElementById("btn8").addEventListener("click", () => updateDisplay(8));
-document.getElementById("btn9").addEventListener("click", () => updateDisplay(9));
+// Listeners
 
+for (let n = 0; n <= 9; n++) {
+    document.getElementById("btn" + n).addEventListener("click", () => updateDisplay(n.toString()));
+}
+
+// Operators
 document.getElementById("add").addEventListener("click", addOperator);
 document.getElementById("subtract").addEventListener("click", subtractOperator);
 document.getElementById("multiply").addEventListener("click", multiplyOperator);
 document.getElementById("divide").addEventListener("click", divideOperator);
 
+// Utility buttons
 document.getElementById("clear").addEventListener("click", clearDisplay);
 document.getElementById("backspace").addEventListener("click", backspace);
 document.getElementById("percent").addEventListener("click", percent);
@@ -200,3 +182,56 @@ document.getElementById("decimal").addEventListener("click", decimalPoint);
 document.getElementById("equals").addEventListener("click", calculate);
 
 
+// Keyboard Support
+
+const keyToButtonId = {
+    "0": "btn0", "1": "btn1", "2": "btn2", "3": "btn3",
+    "4": "btn4", "5": "btn5", "6": "btn6", "7": "btn7",
+    "8": "btn8", "9": "btn9",
+
+    "+": "add",
+    "-": "subtract",
+    "*": "multiply",
+    "/": "divide",
+
+    ".": "decimal",
+
+    "Enter": "equals",
+    "=": "equals",
+
+    "Backspace": "backspace",
+    "Delete": "clear",
+    "Escape": "clear",
+
+    "%": "percent",
+
+    "p": "plusMinus",
+    "P": "plusMinus"
+};
+
+document.addEventListener("keydown", (event) => {
+    const id = keyToButtonId[event.key];
+    if (!id) return;
+
+    const btn = document.getElementById(id);
+    if (!btn) return;
+
+    btn.click();
+    event.preventDefault();
+});
+
+// Underglow effect
+
+const buttons = document.querySelectorAll(".calculator button");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        btn.classList.remove("glow-pulse");
+        void btn.offsetWidth;
+        btn.classList.add("glow-pulse");
+    });
+
+    btn.addEventListener("animationend", () => {
+        btn.classList.remove("glow-pulse");
+    });
+});
