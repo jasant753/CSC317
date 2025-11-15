@@ -11,6 +11,27 @@
     --special-bg: #1f252d;
     --special-hover: #262d36;
     --accent-rgb: 138, 180, 255;
+    --display-bg: #14171c;
+    --display-text: #e8eaf0;
+    --equals-text: #ffffff;
+}
+
+body.light-theme {
+    --bgpage: #f6f7f7;
+    --text-main: #111111;
+    --text-muted: #555555;
+    --button-bg: #fafafa;
+    --button-hover: #ececec;
+    --border-thin: rgba(0, 0, 0, 0.15);
+    --special-bg: #e5e5e5;
+    --special-hover: #dddddd;
+    --accent: #00937a;
+    --accent-hover: #00b894;
+    --accent-equals: #007a63;
+    --accent-rgb: 0, 184, 148;
+    --display-bg: #ffffff;
+    --display-text: #000000;
+    --equals-text: #ffffff;
 }
 
 body {
@@ -42,9 +63,9 @@ body {
     text-align: right;
     padding: 12px;
     box-sizing: border-box;
-    background: #0b0d10;
+    background: var(--display-bg);
     border: 1px solid var(--border-thin);
-    color: var(--text-main);
+    color: var(--display-text);
 }
 
 .keypad {
@@ -70,14 +91,14 @@ button {
     box-shadow: none;
 
     /* Animation speeds */
-    transition:
-            background 0.15s ease,
-            border-color 0.15s ease,
-            transform 0.08s ease,
-            box-shadow 0.15s ease;
+    transition: background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.08s ease,
+    box-shadow 0.15s ease;
 }
 
 /* Lighten buttons on hover */
+
 button:hover {
     background: var(--button-hover);
     border-color: var(--border-thin);
@@ -88,6 +109,7 @@ button:active {
 }
 
 /* Button color grouping */
+
 #backspace,
 #clear,
 #percent {
@@ -119,21 +141,40 @@ button:active {
 }
 
 #equals {
-    background: #0b4baa;
-    color: var(--text-main);
-    border-color: #0b4baa;
+    background: var(--accent-equals);
+    color: var(--equals-text);
+    border-color: var(--accent-equals);
     font-weight: bold;
 }
 
 #equals:hover {
-    background: #145fd8;
-    border-color: #145fd8;
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
 }
 
+/* Menu buttons */
+
+.calc-menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.menu-btn {
+    aspect-ratio: auto;
+    height: 32px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+
 /* Underglow effect */
+
 button.glow-pulse {
     animation: glowFade 1.1s ease-out;
 }
+
 
 @keyframes glowFade {
     0% {
@@ -154,7 +195,15 @@ button.glow-pulse {
 }
 
 /* Hide content for aesthetics */
+
 .hidden {
-    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }

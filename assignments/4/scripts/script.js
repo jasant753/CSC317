@@ -235,3 +235,31 @@ buttons.forEach(btn => {
         btn.classList.remove("glow-pulse");
     });
 });
+
+
+// Menu
+
+const profileBtn = document.getElementById("profileBtn");
+const themeToggle = document.getElementById("themeToggle");
+
+// Return to profile
+profileBtn.addEventListener("click", () => {
+    window.location.href = "index.html";
+});
+
+// Update button icon
+function updateThemeIcon() {
+    if (document.body.classList.contains("light-theme")) {
+        themeToggle.textContent = "☀"; // If light, show sun
+    } else {
+        themeToggle.textContent = "☾"; // If dark, show moon
+    }
+}
+
+// Toggle light / dark mode
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+    updateThemeIcon();
+});
+
+updateThemeIcon();
