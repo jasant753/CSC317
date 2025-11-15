@@ -1,4 +1,3 @@
-/* Color theme taken from ai-1 */
 :root {
     --bg: #0d0f12;
     --text: #e8eaf0;
@@ -15,6 +14,38 @@
     --project-bg: #121418;
 }
 
+body.light-theme {
+    --bg: #f6f7f7;
+    --text: #111111;
+    --muted: #555555;
+    --card: #ffffff;
+    --card-ink: #111111;
+    --card-contrast: #e0e0e0;
+    --border: rgba(0, 0, 0, 0.15);
+    --accent: #00937a;
+    --accent-hover: #00b894;
+    --button-bg: #fafafa;
+    --button-hover: #ececec;
+    --footer-bg: #e8e8e8;
+    --project-bg: #f1f1f1;
+}
+
+body.sfsu-theme {
+    --bg: #1a1029;
+    --text: #f4eaff;
+    --muted: #d0b8e8;
+    --card: #241436;
+    --card-ink: #f4eaff;
+    --card-contrast: #150b22;
+    --border: #3e2a5c;
+    --accent: #f6c453;
+    --accent-hover: #ffdd88;
+    --button-bg: #2a1844;
+    --button-hover: #351f59;
+    --footer-bg: #160b28;
+    --project-bg: #190f2d;
+}
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -28,7 +59,6 @@ body.site {
     color: var(--text);
 }
 
-/* Added fixed header and transparent scroll under from ai-2 */
 .site-header {
     position: sticky;
     top: 0;
@@ -50,7 +80,6 @@ body.site {
     transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-/* Placed avatar to left of name from all ai css*/
 .header-inner {
     display: flex;
     align-items: center;

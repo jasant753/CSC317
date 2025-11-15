@@ -34,6 +34,24 @@ body.light-theme {
     --equals-text: #ffffff;
 }
 
+body.sfsu-theme {
+    --bgpage: #1a1029;
+    --text-main: #f4eaff;
+    --text-muted: #d0b8e8;
+    --button-bg: #25163a;
+    --button-hover: #2f1e49;
+    --border-thin: #3e2a5c;
+    --special-bg: #2d1a47;
+    --special-hover: #3a245c;
+    --accent: #5b2e91;
+    --accent-hover: #7438b8;
+    --accent-equals: #f6c453;
+    --equals-text: #000000;
+    --accent-rgb: 255, 215, 80;
+    --display-bg: #160b24;
+    --display-text: #f4eaff;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: var(--bgpage);

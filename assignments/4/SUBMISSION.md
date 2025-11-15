@@ -74,3 +74,10 @@ The dark theme is based on the hybrid style we designed in Assignment 3, and I a
 - From assignment 3, profile was updated to reflect my information and past projects
 - Added a "Try me" button that takes the user to the calculator app
 - Calculator App contains a "profile" button that takes the user back to profile
+
+# Extra Credit implementations
+
+- Updated calculator with additional "SFSU" colors theme and updated switcher button
+- Added calculator color schemes to profile and implemented a menu similar to the theme switcher from Assignment 3
+- Instead of loading separate css styles, streamlined the theme switching script to change color variables instead
+- New color schemes are not easily added with minimal changes to the current code, no additional files needed

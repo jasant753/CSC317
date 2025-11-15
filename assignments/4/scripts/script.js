@@ -239,27 +239,47 @@ buttons.forEach(btn => {
 
 // Menu
 
+// Profile button
 const profileBtn = document.getElementById("profileBtn");
-const themeToggle = document.getElementById("themeToggle");
-
-// Return to profile
 profileBtn.addEventListener("click", () => {
+    // go back to index.html in same folder
     window.location.href = "index.html";
 });
 
-// Update button icon
-function updateThemeIcon() {
-    if (document.body.classList.contains("light-theme")) {
-        themeToggle.textContent = "☀"; // If light, show sun
-    } else {
-        themeToggle.textContent = "☾"; // If dark, show moon
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+
+const themes = ["dark", "light", "sfsu"];
+let currentThemeIndex = 0;
+
+function applyTheme(mode) {
+    document.body.classList.remove("light-theme", "sfsu-theme");
+
+    if (mode === "light") {
+        document.body.classList.add("light-theme");
+    } else if (mode === "sfsu") {
+        document.body.classList.add("sfsu-theme");
     }
 }
 
-// Toggle light / dark mode
-themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("light-theme");
-    updateThemeIcon();
-});
+function updateThemeIcon(mode) {
+    if (mode === "dark") {
+        themeIcon.textContent = "☾";
+    } else if (mode === "light") {
+        themeIcon.textContent = "☀";
+    } else {
+        themeIcon.textContent = "SFSU";
+    }
+}
 
-updateThemeIcon();
+// initial theme (dark)
+applyTheme("dark");
+updateThemeIcon("dark");
+
+themeToggle.addEventListener("click", () => {
+    currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+    const mode = themes[currentThemeIndex];
+
+    applyTheme(mode);
+    updateThemeIcon(mode);
+});
